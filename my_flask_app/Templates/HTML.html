@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo ao EchoScript</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcome-message">Bem vindo ao EchoScript</h1>
+        <form id="upload-form">
+            <input type="file" id="audio-file" accept="audio/*">
+        </form>
+        <audio id="audio-player" controls></audio>
+        <textarea id="transcription" placeholder="Digite a transcrição aqui..."></textarea>
+        <button id="save-btn">Salvar Transcrição</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
